@@ -17,7 +17,7 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/sortable_table.gif"
      alt="Simple Table"
-     style="width: 240px;" />     
+     width="240px" />     
      
      
      
