@@ -27,7 +27,7 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/selectable_table.gif"
      alt="Simple Table"
-     style="width: 240px;" />     
+     width="240px" />     
      
 
 
