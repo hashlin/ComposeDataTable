@@ -15,14 +15,19 @@ DataTable View using Jetpack Compose
 
 ### Sortable Table
 
-![](screenshots/sortable_table.gif | width=240)     
+<img src="screenshots/sortable_table.gif"
+     alt="Simple Table"
+     style="width: 240px;" />     
+     
      
      
 <br/>
 
 ### Selectable Table
 
-![](screenshots/selectable_table.gif | width=240)     
+<img src="screenshots/selectable_table.gif"
+     alt="Simple Table"
+     style="width: 240px;" />     
      
 
 
@@ -32,7 +37,9 @@ DataTable View using Jetpack Compose
 
 ### Paginated Table
 
-![](screenshots/paginated_table.gif | width=240)     
+<img src="screenshots/paginated_table.gif"
+     alt="Simple Table"
+     style="width: 240px;" />     
      
      
 <br/>
@@ -40,6 +47,8 @@ DataTable View using Jetpack Compose
 
 ### Full Featured and Customized Table
 
-![](screenshots/full_featured_table | width=240)     
+<img src="screenshots/full_featured_table.gif"
+     alt="Simple Table"
+     style="width: 240px;" />                    
      
      
