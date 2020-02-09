@@ -7,7 +7,7 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/simple_table.png"
      alt="Simple Table"
-     style="width: 240px;" />
+     width="300px" />
      
 
 
@@ -17,7 +17,7 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/sortable_table.gif"
      alt="Simple Table"
-     width="240px" />     
+     width="300px" />     
      
      
      
@@ -27,7 +27,7 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/selectable_table.gif"
      alt="Simple Table"
-     width="240px" />     
+     width="300px" />     
      
 
 
@@ -39,7 +39,7 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/paginated_table.gif"
      alt="Simple Table"
-     style="width: 240px;" />     
+     width="300px" />     
      
      
 <br/>
@@ -49,6 +49,6 @@ DataTable View using Jetpack Compose
 
 <img src="screenshots/full_featured_table.gif"
      alt="Simple Table"
-     style="width: 240px;" />                    
+     width="300px" />                    
      
      
