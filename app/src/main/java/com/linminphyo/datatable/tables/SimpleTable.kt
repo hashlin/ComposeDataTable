@@ -23,16 +23,10 @@ fun SimpleTable(menuItems: List<MenuItem>) {
                 0 -> Text(text = "Name")
                 1 -> Text(text = "Price")
             }
-
         }
 
         for (menuItem in menuItems) {
-            dataRow(
-                selected = menuItem.isSelected,
-                onSelectedChange = {
-                    menuItem.isSelected = it
-                }
-            ) { index ->
+            dataRow { index ->
                 when (index) {
                     0 -> Text(menuItem.name)
                     1 -> Text("$ ${menuItem.unitPrice}")
