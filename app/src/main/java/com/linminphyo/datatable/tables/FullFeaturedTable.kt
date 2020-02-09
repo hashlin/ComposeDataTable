@@ -9,6 +9,7 @@ import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Spacer
 import androidx.ui.material.DataTable
 import androidx.ui.material.DefaultDataTablePagination
+import androidx.ui.material.DefaultDataTableSorting
 import androidx.ui.material.MaterialTheme
 import androidx.ui.res.imageResource
 import androidx.ui.tooling.preview.Preview
@@ -28,10 +29,20 @@ fun FullFeaturedTable(menuItems: MutableList<MenuItem>) {
     DataTable(
         borderWidth = 0.dp,
         dataRowHeight = 150.dp,
-        columns = 2, pagination = DefaultDataTablePagination(
+        columns = 2,
+        pagination = DefaultDataTablePagination(
             initialRowsPerPage = 3,
             availableRowsPerPage = menuItems.chunked(3).map { it.size }
-        )
+        ),
+        sorting = DefaultDataTableSorting(
+            sortableColumns = setOf(1),
+            onSortRequest = { _, isAscending ->
+                if (isAscending) {
+                    menuItems.sortBy { it.unitPrice }
+                } else {
+                    menuItems.sortByDescending { it.unitPrice }
+                }
+            })
     ) {
         headerRow { index ->
             when (index) {
@@ -50,13 +61,19 @@ fun FullFeaturedTable(menuItems: MutableList<MenuItem>) {
             ) { index ->
                 when (index) {
                     0 -> Column(LayoutWidth(180.dp)) {
-                            SimpleImage(image = imageResource(id = menuItem.image))
-                            Spacer(modifier = LayoutHeight(8.dp))
-                            Text("${menuItem.name}", style = MaterialTheme.typography().h6.copy(color = MaterialTheme.colors().secondary))
-                        }
+                        SimpleImage(image = imageResource(id = menuItem.image))
+                        Spacer(modifier = LayoutHeight(8.dp))
+                        Text(
+                            "${menuItem.name}",
+                            style = MaterialTheme.typography().h6.copy(color = MaterialTheme.colors().secondary)
+                        )
+                    }
 
 
-                    1 -> Text("$ ${menuItem.unitPrice}", style = MaterialTheme.typography().h6.copy(color = MaterialTheme.colors().secondary))
+                    1 -> Text(
+                        "$ ${menuItem.unitPrice}",
+                        style = MaterialTheme.typography().h6.copy(color = MaterialTheme.colors().secondary)
+                    )
                 }
             }
         }

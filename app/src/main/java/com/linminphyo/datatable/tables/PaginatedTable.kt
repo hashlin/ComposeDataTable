@@ -1,10 +1,14 @@
 package com.linminphyo.datatable.tables
 
 import androidx.compose.Composable
+import androidx.ui.core.Alignment
 import androidx.ui.core.Text
+import androidx.ui.layout.Container
+import androidx.ui.layout.LayoutWidth
 import androidx.ui.material.DataTable
 import androidx.ui.material.DefaultDataTablePagination
 import androidx.ui.tooling.preview.Preview
+import androidx.ui.unit.dp
 
 /**
  * Created by lin min phyo on 2/9/20.
@@ -12,7 +16,7 @@ import androidx.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-fun PreviewPaginatedMenu(){
+fun PreviewPaginatedMenu() {
     PaginatedTable(menuItems = DataProvider.coffeeMenu)
 }
 
@@ -33,14 +37,11 @@ fun PaginatedTable(menuItems: List<MenuItem>) {
         }
 
         for (menuItem in menuItems) {
-            dataRow(
-                selected = menuItem.isSelected,
-                onSelectedChange = {
-                    menuItem.isSelected = it
-                }
-            ) { index ->
+            dataRow { index ->
                 when (index) {
-                    0 -> Text(menuItem.name)
+                    0 -> Container(LayoutWidth(200.dp), alignment = Alignment.CenterLeft) {
+                        Text(menuItem.name)
+                    }
                     1 -> Text("$ ${menuItem.unitPrice}")
                 }
             }

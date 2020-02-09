@@ -11,16 +11,17 @@ import androidx.ui.tooling.preview.Preview
  */
 @Preview
 @Composable
-fun PreviewSortableTable(){
+fun PreviewSortableTable() {
     SortableTable(menuItems = DataProvider.coffeeMenu.toMutableList())
 }
 
 @Composable
 fun SortableTable(menuItems: MutableList<MenuItem>) {
     DataTable(
-        columns = 2, sorting = DefaultDataTableSorting(
+        columns = 2,
+        sorting = DefaultDataTableSorting(
             sortableColumns = setOf(1),
-            onSortRequest = { index, isAscending ->
+            onSortRequest = { _, isAscending ->
                 if (isAscending) {
                     menuItems.sortBy { it.unitPrice }
                 } else {
@@ -37,12 +38,7 @@ fun SortableTable(menuItems: MutableList<MenuItem>) {
         }
 
         for (menuItem in menuItems) {
-            dataRow(
-                selected = menuItem.isSelected,
-                onSelectedChange = {
-                    menuItem.isSelected = it
-                }
-            ) { index ->
+            dataRow { index ->
                 when (index) {
                     0 -> Text(menuItem.name)
                     1 -> Text("$ ${menuItem.unitPrice}")
