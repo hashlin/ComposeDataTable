@@ -52,3 +52,8 @@ DataTable View using Jetpack Compose
      width="300px" />                    
      
      
+
+
+### Credits
+Icons used in this app are from https://www.freepik.com/free-photos-vectors/coffee.
+     
