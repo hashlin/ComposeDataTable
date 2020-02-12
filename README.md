@@ -55,5 +55,5 @@ DataTable View using Jetpack Compose
 
 
 ### Credits
-Icons used in this app are from https://www.freepik.com/free-photos-vectors/coffee.
+Coffee icons : https://www.freepik.com/free-photos-vectors/coffee.
      
